@@ -1,0 +1,157 @@
+Zadanie 1, 2
+
+using System;
+
+class lab3
+{
+    //Zadanie 2.1
+/*    double a, b, wynik;
+
+    public void czytaj_dane()
+    {
+        Console.WriteLine("Wpisz dł. boku 'a':");
+        a = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Wpisz dł. boku 'b':");
+        b = Convert.ToDouble(Console.ReadLine());
+    }
+
+    public void oblicz_dane()
+    {
+        wynik = a* b;
+    }
+
+    public void wyswietl_dane()
+    {
+        Console.WriteLine(wynik);
+    }*/
+    static void Main(string[] args)
+    {
+
+        /*Ćwiczenie 1
+        string[] tab1 = { "jeden", "dwa", "trzy" };
+
+        for (int i = 0; i < tab1.Length; i++)
+        {
+            tab1[i] = tab1[i].ToUpper();
+            Console.WriteLine(tab1[i]);
+        }*/
+
+        //Zadanie 2.1
+/*        lab3 pole_pr = new lab3();
+        pole_pr.czytaj_dane();
+        pole_pr.oblicz_dane();
+        pole_pr.wyswietl_dane();*/
+    }
+}
+
+
+
+//Zadanie 2.2
+namespace{
+    class lab3
+    {
+
+        static void Main(string[] args)
+        {
+
+            Kadra osoba = new Kadra();
+            osoba.wczytaj1();
+            osoba.wyswietl1();
+        }
+
+
+        class Osoba
+        {
+            String imie, nazwisko, ulica, kod, miasto;
+
+            public void wczytaj()
+            {
+
+                imie = Console.ReadLine();
+                nazwisko = Console.ReadLine();
+                ulica = Console.ReadLine();
+                kod = Console.ReadLine();
+                miasto = Console.ReadLine();
+
+            }
+
+            public void wyswietl()
+            {
+                Console.WriteLine(imie);
+                Console.WriteLine(nazwisko);
+                Console.WriteLine(ulica);
+                Console.WriteLine(kod);
+                Console.WriteLine(miasto);
+            }
+        }
+
+        class Kadra : Osoba
+        {
+            String wyksztalcenie, stanowisko;
+
+            public void wczytaj1()
+            {
+                wczytaj();
+                Console.WriteLine("Podaj wykształcenie: ");
+                Console.ReadLine();
+                Console.WriteLine("Podaj stanowisko: ");
+                Console.ReadLine();
+            }
+
+            public void wyswietl1()
+            {
+                wyswietl();
+                Console.WriteLine("Dodatkowe informacje: " + wyksztalcenie + "\n" + stanowisko);
+            }
+        }
+    }
+}}
+}
+
+//Zadanie 3
+namespace std;
+class lab3
+{
+
+    static void Main(string[] args)
+    {
+        pierwiastki pierwiastki = new pierwiastki();
+        pierwiastki.czytaj_dane();
+        pierwiastki.przetworz_dane();
+        pierwiastki.wyswietl_wynik();
+    }
+
+
+    class pierwiastki
+    {
+        double a, b, c, x1, x2, delta;
+
+        public void czytaj_dane()
+        {
+            while (a == 0)
+            {
+                Console.WriteLine("Podaj a różne od 0:");
+                a = Convert.ToDouble(Console.ReadLine());
+            }
+            Console.WriteLine("Podaj b:");
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Podaj c:");
+            c = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public void przetworz_dane()
+        {
+            delta = b * b + 4 * a * c;
+            x1 = (-b - Math.Sqrt(delta))/2*a;
+            x2 = (-b + Math.Sqrt(delta))/2*a;
+
+        }
+
+        public void wyswietl_wynik()
+        {
+            Console.WriteLine(x1 + " " + x2);
+        }
+
+
+    }
+}
