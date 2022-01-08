@@ -1,0 +1,209 @@
+namespace std;
+class lab3
+{
+
+    static void Main(string[] args)
+    {
+        macierz macierz = new macierz();
+        macierz.czytaj_dane();
+    }
+
+
+    class macierz
+    {
+        int dane[][] = ;
+        FileStream fout, fin;
+        public void czytaj_dane()
+        {
+            for (int i = 0; i<10; i++)
+            {
+                Console.WriteLine();
+                for(int j = 0; j<10; j++)
+                {   
+                    if (i == j)
+                    Console.Write("1");
+                    else
+                    Console.Write("0");
+                }
+
+            }
+        }
+
+        public void zapisz_dane_do_pliku()
+        {
+            fout = new FileStream("dane.txt", FileMode.Create);
+            StreamWriter streamWriter = new StreamWriter(fout);
+            streamWriter.Write()
+        }
+
+        public void wyswietl_wynik()
+        {
+        }
+
+
+    }
+}
+
+/*
+ * [21:05] Marlena Sielewińska
+using System;
+
+using System.IO;
+
+namespace Zadanie_41
+
+{​​​​​
+
+    class Matrix
+
+    {​​​​​
+
+        FileStream fout, fin;
+
+        public void czytaj_dane(int[,] tablica, int rozmiar)
+
+        {​​​​​
+
+            int i, j;
+
+            Console.WriteLine("Tworzymy tablicę 10 x 10.");
+
+            Console.WriteLine();
+
+            for (i = 0; i < rozmiar; i++)
+
+            {​​​​​
+
+                for (j = 0; j < rozmiar; j++)
+
+                {​​​​​
+
+                    if (i == j)
+
+                        tablica[i, j] = 1;
+
+                    else
+
+                        tablica[i, j] = 0;
+
+                    Console.Write(tablica[i, j] + " ");
+
+                }​​​​​
+
+                Console.WriteLine();
+
+            }​​​​​
+
+        }​​​​​
+
+        public void zapisz_dane_do_pliku(int[,] tablica, int rozmiar)
+
+        {​​​​​
+
+            int i, j;
+
+            Console.WriteLine();
+
+            Console.WriteLine("Zapisujemy tablicę 10 x 10 do pliku");
+
+            Console.WriteLine();
+
+            fout = new FileStream("dane.txt", FileMode.Create);
+
+            StreamWriter fstr_out = new StreamWriter(fout);
+
+            for (i = 0; i < rozmiar; i++)
+
+        {​​​​​
+
+                for (j = 0; j < rozmiar; j++)
+
+                {​​​​​
+
+                    fstr_out.Write((char)tablica[i, j]);
+
+                    // Rzutujemy i zapisujemy tablicę do pliku.
+
+                    Console.Write(tablica[i, j] + " ");
+
+                }​​​​​
+
+                Console.WriteLine();
+
+            }​​​​​
+
+            fstr_out.Close();
+
+            fout.Close();
+
+        }​​​​​
+
+        public void czytaj_dane_z_pliku(int[,] tablica1, int rozmiar)
+
+        {​​​​​
+
+            int i, j;
+
+            Console.WriteLine();
+
+            Console.WriteLine("Odczytujemy tablicę1 10 x 10 z pliku");
+
+            Console.WriteLine();
+
+            fin = new FileStream("dane.txt", FileMode.Open);
+
+            StreamReader fstr_in = new StreamReader(fin);
+
+            for (i = 0; i < rozmiar; i++)
+
+            {​​​​​
+
+                for (j = 0; j < rozmiar; j++)
+
+                {​​​​​
+
+                    tablica1[i, j] = (int)fstr_in.Read();
+
+                    // Rzutujemy i odczytujemy zawartość pliku, którą umieszczamy
+
+                    // w tablicy1.
+
+                    Console.Write(tablica1[i, j] + " ");
+
+                }​​​​​
+
+                Console.WriteLine();
+
+            }​​​​​
+
+            fstr_in.Close();
+
+            fin.Close();
+
+        }​​​​​
+
+        static void Main(string[] args)
+
+        {​​​​​
+
+            const int rozmiar = 10;
+
+            int[,] tablica = new int[rozmiar, rozmiar];
+
+            int[,] tablica1 = new int[rozmiar, rozmiar];
+
+            Matrix matrix1 = new Matrix();
+
+            matrix1.czytaj_dane(tablica, rozmiar);
+
+            matrix1.zapisz_dane_do_pliku(tablica, rozmiar);
+
+            matrix1.czytaj_dane_z_pliku(tablica1, rozmiar);
+
+        }​​​​​
+
+    }​​​​​
+
+}​​​​​
+
+*/
